@@ -39,7 +39,7 @@ public class ConductorRest {
     }
 
     @GetMapping("/conductores/disponibles/radio3km/{ubicacion}")
-    private ResponseEntity<List<Conductor>> conductor(@PathVariable(value = "ubicacion") Integer ubicacion){
+    private ResponseEntity<List<Conductor>> conductoresDisponibles3km(@PathVariable(value = "ubicacion") Integer ubicacion){
         return ResponseEntity.ok(conductorService.obtenerTodosConductoresDisponibles3KM(ubicacion));
     }
 }

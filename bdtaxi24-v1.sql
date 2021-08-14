@@ -5,7 +5,7 @@
 -- Dumped from database version 13.4
 -- Dumped by pg_dump version 13.3
 
--- Started on 2021-08-14 01:45:23 CDT
+-- Started on 2021-08-14 14:24:02 CDT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -182,7 +182,9 @@ ALTER TABLE ONLY public.viajes ALTER COLUMN id SET DEFAULT nextval('public.viaje
 
 COPY public.conductores (id, nombre, paterno, materno, celular, disponibilidad, ubicacion) FROM stdin;
 2	ANA	MORGADO	LIRA	2831311841	t	51
-1	JAMIL	ENRIQUEZ	DECEANO\n	2838748284	t	48
+31	Conductor 1	Paterno 3	Materno 3	2831019192	t	40
+32	Conductor 2	Paterno 4	Materno 4	2839009999	t	44
+1	JAMIL	ENRIQUEZ	DECEANO\n	2838748284	f	46
 \.
 
 
@@ -217,7 +219,7 @@ COPY public.viajes (id, fecha, hora_inicio, hora_fin, estatus, id_pasajero, id_c
 -- Name: conductores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: usr_taxi24
 --
 
-SELECT pg_catalog.setval('public.conductores_id_seq', 2, true);
+SELECT pg_catalog.setval('public.conductores_id_seq', 32, true);
 
 
 --
@@ -283,7 +285,7 @@ ALTER TABLE ONLY public.viajes
     ADD CONSTRAINT viajes_id_pasajero_fkey FOREIGN KEY (id_pasajero) REFERENCES public.pasajeros(id);
 
 
--- Completed on 2021-08-14 01:45:23 CDT
+-- Completed on 2021-08-14 14:24:02 CDT
 
 --
 -- PostgreSQL database dump complete

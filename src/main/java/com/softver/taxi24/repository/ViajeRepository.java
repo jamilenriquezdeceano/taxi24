@@ -1,4 +1,7 @@
 package com.softver.taxi24.repository;
 
-public interface ViajeRepository extends org.springframework.data.jpa.repository.JpaRepository<com.softver.taxi24.model.Viaje, java.lang.Long> {
+import com.softver.taxi24.model.Viaje;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ViajeRepository extends JpaRepository<Viaje, Long> {
 }

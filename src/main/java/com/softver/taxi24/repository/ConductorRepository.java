@@ -17,5 +17,6 @@ public interface ConductorRepository extends JpaRepository<Conductor, Long> {
     List<Conductor> buscarConductoresDisponiblesPorKm(@Param("radioInf") Integer radioInferior, @Param("radioSup") Integer radioSuperior);
 
 
-
+    @Query(value = "SELECT * FROM conductores c WHERE c.disponibilidad = true and c.ubicacion < :pasajeroUbi limit 3", nativeQuery = true)
+    List<Conductor> buscarConductoresCercanos(@Param("pasajeroUbi") Integer pasajeroUbi);
 }
