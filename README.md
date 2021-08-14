@@ -22,17 +22,20 @@ Step 3. mvn spring-boot:run
 
 ## All Endpoints are GET except /api/viaje is POST and  /api/viaje/completar/{id} is PUT
 - Conductor 
+
   http://localhost:8080/api/conductores
   http://localhost:8080/api/conductores/disponibles
   http://localhost:8080/api/conductores/disponibles/radio3km/{ubicacion}
   http://localhost:8080/api/conductor/{id}
 
 - Pasajero
+
   http://localhost:8080/api/pasajeros
   http://localhost:8080/api/pasajero/{id}
   http://localhost:8080/api/pasajero/buscar/viaje/cercano/{ubicacion}
 
 - Viajes
+
   http://localhost:8080/api/viajes
   http://localhost:8080/api/viaje
   http://localhost:8080/api/viaje/completar/{id}
